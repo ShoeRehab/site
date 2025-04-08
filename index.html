@@ -20,10 +20,12 @@
     }
     nav {
       margin: 1rem 0;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
     nav a {
-      margin: 0 0.8rem;
       color: #5CE1E6;
       text-decoration: none;
       font-weight: bold;
@@ -37,16 +39,20 @@
     }
     h1, h2 {
       color: #5CE1E6;
+      text-align: center;
     }
     ul li {
       margin-bottom: 0.5rem;
     }
-    .contacts a {
-      display: inline-block;
-      margin: 0.5rem;
-      text-decoration: none;
-      font-weight: bold;
-      color: #5CE1E6;
+    .contacts-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .contacts-icons a img {
+      width: 32px;
+      height: 32px;
     }
     footer {
       text-align: center;
@@ -64,14 +70,9 @@
       padding: 0.3rem 0.5rem;
       font-size: 0.8rem;
     }
-    .icon-button {
-      width: 32px;
-      height: 32px;
-      margin: 0 5px;
-    }
     .form-buttons a {
       display: block;
-      margin: 0.5rem 0;
+      margin: 0.5rem auto;
       padding: 0.7rem 1rem;
       background-color: #1e1e1e;
       color: white;
@@ -79,6 +80,9 @@
       text-decoration: none;
       border-radius: 6px;
       max-width: 300px;
+    }
+    .contact-info {
+      text-align: center;
     }
   </style>
   <script>
@@ -162,6 +166,16 @@
       <li>Repair</li>
       <li>Stretching (length & width)</li>
     </ul>
+
+    <div class="form-buttons">
+      <a href="#" data-lang="pl">Wypełnij formularz konsultacyjny</a>
+      <a href="#" data-lang="uk">Заповнити форму для консультації</a>
+      <a href="#" data-lang="en">Fill in consultation form</a>
+
+      <a href="#" data-lang="pl">Złóż zamówienie na usługę</a>
+      <a href="#" data-lang="uk">Заповнити заявку на послугу</a>
+      <a href="#" data-lang="en">Order a service</a>
+    </div>
   </section>
 
   <section id="courier">
@@ -171,39 +185,74 @@
     <p data-lang="pl">Oferujemy odbiór i dostawę obuwia na terenie Gdańska. Cena ustalana indywidualnie.</p>
     <p data-lang="uk">Забираємо та доставляємо взуття по Ґданську. Ціна обговорюється індивідуально.</p>
     <p data-lang="en">We pick up and deliver shoes in Gdańsk. Price discussed individually.</p>
+
+    <div class="form-buttons">
+      <a href="#" data-lang="pl">Zamów kuriera</a>
+      <a href="#" data-lang="uk">Замовити кур'єра</a>
+      <a href="#" data-lang="en">Request a courier</a>
+    </div>
   </section>
+  
+  <section id="reviews">
+  <h2 data-lang="pl">Opinie klientów</h2>
+  <h2 data-lang="uk">Відгуки клієнтів</h2>
+  <h2 data-lang="en">Customer Reviews</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+    <img src="https://via.placeholder.com/200x200?text=Review+1" alt="Review 1" width="200" />
+    <img src="https://via.placeholder.com/200x200?text=Review+2" alt="Review 2" width="200" />
+    <img src="https://via.placeholder.com/200x200?text=Review+3" alt="Review 3" width="200" />
+  </div>
+</section>
+
+<section id="beforeafter">
+  <h2 data-lang="pl">Przed / Po</h2>
+  <h2 data-lang="uk">До / Після</h2>
+  <h2 data-lang="en">Before / After</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+    <div>
+      <p style="text-align: center;">Before</p>
+      <img src="https://via.placeholder.com/200x200?text=Before" alt="Before" width="200" />
+    </div>
+    <div>
+      <p style="text-align: center;">After</p>
+      <img src="https://via.placeholder.com/200x200?text=After" alt="After" width="200" />
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2 data-lang="pl">Cennik</h2>
+  <h2 data-lang="uk">Вартість послуг</h2>
+  <h2 data-lang="en">Pricing</h2>
+  <p data-lang="pl">Sprawdź nasze aktualne ceny:</p>
+  <p data-lang="uk">Перевірте наші актуальні ціни:</p>
+  <p data-lang="en">Check our current prices:</p>
+  <div style="text-align: center;">
+    <img src="https://via.placeholder.com/600x400?text=Price+List" alt="Cennik" style="max-width: 100%; border-radius: 10px;" />
+  </div>
+</section>
 
   <section id="contact">
     <h2 data-lang="pl">Kontakt</h2>
     <h2 data-lang="uk">Контакти</h2>
     <h2 data-lang="en">Contact</h2>
-    <div class="contacts">
-      <a href="tel:+48728200670">+48 728 200 670</a>
-      <a href="https://wa.me/48728200670"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/whatsapp.svg" alt="WhatsApp" class="icon-button"></a>
-      <a href="https://t.me/+48728200670"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/telegram.svg" alt="Telegram" class="icon-button"></a>
-      <a href="https://www.facebook.com/share/16HeBvywdp/?mibextid=wwXIfr"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/facebook.svg" alt="Messenger" class="icon-button"></a>
-      <a href="https://www.instagram.com/shoerehab.pl?igsh=aHlnNnhkdXBmYmF3"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/instagram.svg" alt="Instagram" class="icon-button"></a>
-      <a href="mailto:shoerehabgd@gmail.com">shoerehabgd@gmail.com</a>
-    </div>
-    <div class="form-buttons">
-      <a href="#" data-lang="pl">Wypełnij formularz konsultacyjny</a>
-      <a href="#" data-lang="uk">Заповнити форму для консультації</a>
-      <a href="#" data-lang="en">Fill in consultation form</a>
 
-      <a href="#" data-lang="pl">Złóż zamówienie na usługę</a>
-      <a href="#" data-lang="uk">Заповнити заявку на послугу</a>
-      <a href="#" data-lang="en">Order a service</a>
-
-      <a href="#" data-lang="pl">Zamów kuriera</a>
-      <a href="#" data-lang="uk">Замовити кур'єра</a>
-      <a href="#" data-lang="en">Request a courier</a>
+    <div class="contacts-icons">
+      <a href="https://wa.me/48728200670"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/whatsapp.svg" alt="WhatsApp"></a>
+      <a href="https://t.me/+48728200670"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/telegram.svg" alt="Telegram"></a>
+      <a href="https://www.facebook.com/share/16HeBvywdp/?mibextid=wwXIfr"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/facebook.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/shoerehab.pl?igsh=aHlnNnhkdXBmYmF3"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/instagram.svg" alt="Instagram"></a>
     </div>
-    <br/>
-    <p data-lang="pl"><strong>Lokalizacja partnerów:</strong></p>
-    <p data-lang="uk"><strong>Локація наших партнерів:</strong></p>
-    <p data-lang="en"><strong>Our partners’ location:</strong></p>
-    <p>Długie Ogrody 11, 80-765 Gdańsk</p>
-    <p>Godziny otwarcia: Poniedziałek–Czwartek, 11:00–17:00</p>
+
+    <div class="contact-info">
+      <p><a href="tel:+48728200670" style="color: #5CE1E6;">+48 728 200 670</a></p>
+      <p><a href="mailto:shoerehabgd@gmail.com" style="color: #5CE1E6;">shoerehabgd@gmail.com</a></p>
+      <p data-lang="pl"><strong>Lokalizacja partnerów:</strong></p>
+      <p data-lang="uk"><strong>Локація наших партнерів:</strong></p>
+      <p data-lang="en"><strong>Our partners’ location:</strong></p>
+      <p>Długie Ogrody 11, 80-765 Gdańsk</p>
+      <p>Godziny otwarcia: Poniedziałek–Czwartek, 11:00–17:00</p>
+    </div>
   </section>
 
   <footer>
