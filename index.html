@@ -3,26 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shoe Rehab</title>
+  <title>Shoe Rehab Gdańsk</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 2rem;
-      background: #f5f5f5;
+      background: #f4f4f4;
       color: #333;
+    }
+    header {
+      text-align: center;
+      background: #1e1e1e;
+      color: white;
+      padding: 1.5rem 1rem;
+    }
+    nav {
+      margin: 1rem 0;
       text-align: center;
     }
-    h1 {
+    nav a {
+      margin: 0 1rem;
       color: #1e1e1e;
+      text-decoration: none;
+      font-weight: bold;
     }
-    p {
-      font-size: 1.2rem;
+    section {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #222;
+    }
+    .contacts a {
+      display: inline-block;
+      margin: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #0066cc;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+      color: #777;
+    }
+    .lang-switcher {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+    .lang-switcher button {
+      margin-left: 5px;
+      padding: 0.3rem 0.5rem;
+      font-size: 0.8rem;
     }
   </style>
+  <script>
+    function switchLang(lang) {
+      const content = document.querySelectorAll('[data-lang]');
+      content.forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    }
+    window.onload = () => switchLang('pl');
+  </script>
 </head>
 <body>
-  <h1>Witamy w Shoe Rehab</h1>
-  <p>Strona w trakcie budowy. Wróć później!</p>
+  <div class="lang-switcher">
+    <button onclick="switchLang('pl')">PL</button>
+    <button onclick="switchLang('uk')">UK</button>
+    <button onclick="switchLang('en')">EN</button>
+  </div>
+  <header>
+    <h1>Shoe Rehab Gdańsk</h1>
+    <p data-lang="pl">Profesjonalna pielęgnacja i renowacja obuwia</p>
+    <p data-lang="uk" style="display:none">Професійне очищення та реставрація взуття</p>
+    <p data-lang="en" style="display:none">Professional shoe cleaning and restoration</p>
+  </header>
+
+  <nav>
+    <a href="#services">Usługi</a>
+    <a href="#courier">Kurier</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+
+  <section id="services">
+    <h2 data-lang="pl">Nasze usługi</h2>
+    <h2 data-lang="uk" style="display:none">Наші послуги</h2>
+    <h2 data-lang="en" style="display:none">Our services</h2>
+    <ul>
+      <li>Czyszczenie i dezynfekcja</li>
+      <li>Farbowanie i pielęgnacja skóry</li>
+      <li>Renowacja i naprawa</li>
+    </ul>
+  </section>
+
+  <section id="courier">
+    <h2 data-lang="pl">Usługa kuriera</h2>
+    <h2 data-lang="uk" style="display:none">Кур'єрська послуга</h2>
+    <h2 data-lang="en" style="display:none">Courier service</h2>
+    <p data-lang="pl">Oferujemy odbiór i dostawę obuwia na terenie Gdańska. Cena ustalana indywidualnie.</p>
+    <p data-lang="uk" style="display:none">Забираємо та доставляємо взуття по Ґданську. Ціна обговорюється індивідуально.</p>
+    <p data-lang="en" style="display:none">We pick up and deliver shoes in Gdańsk. Price discussed individually.</p>
+  </section>
+
+  <section id="contact">
+    <h2 data-lang="pl">Kontakt</h2>
+    <h2 data-lang="uk" style="display:none">Контакти</h2>
+    <h2 data-lang="en" style="display:none">Contact</h2>
+    <div class="contacts">
+      <a href="https://wa.me/48728200670">WhatsApp</a>
+      <a href="https://t.me/+48728200670">Telegram</a>
+      <a href="https://www.facebook.com/share/16HeBvywdp/?mibextid=wwXIfr">Messenger</a>
+      <a href="mailto:shoerehabgd@gmail.com">shoerehabgd@gmail.com</a>
+    </div>
+    <p>Długie Ogrody 11, 80-765 Gdańsk</p>
+    <p>Godziny otwarcia: Poniedziałek–Czwartek, 11:00–17:00</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shoe Rehab. Wszelkie prawa zastrzeżone.</p>
+  </footer>
 </body>
 </html>
