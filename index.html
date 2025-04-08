@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shoe Rehab Gdańsk</title>
+  <title>Shoe Rehab</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -39,6 +39,9 @@
     h1, h2 {
       color: #222;
     }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
     .contacts a {
       display: inline-block;
       margin: 0.5rem;
@@ -62,6 +65,22 @@
       padding: 0.3rem 0.5rem;
       font-size: 0.8rem;
     }
+    .icon-button {
+      width: 32px;
+      height: 32px;
+      margin: 0 5px;
+    }
+    .form-buttons a {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.7rem 1rem;
+      background-color: #1e1e1e;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 6px;
+      max-width: 300px;
+    }
   </style>
   <script>
     function switchLang(lang) {
@@ -82,8 +101,8 @@
   <header>
     <h1>Shoe Rehab Gdańsk</h1>
     <p data-lang="pl">Profesjonalna pielęgnacja i renowacja obuwia</p>
-    <p data-lang="uk" style="display:none">Професійне очищення та реставрація взуття</p>
-    <p data-lang="en" style="display:none">Professional shoe cleaning and restoration</p>
+    <p data-lang="uk">Професійне очищення та реставрація взуття</p>
+    <p data-lang="en">Professional shoe cleaning and restoration</p>
   </header>
 
   <nav>
@@ -94,34 +113,63 @@
 
   <section id="services">
     <h2 data-lang="pl">Nasze usługi</h2>
-    <h2 data-lang="uk" style="display:none">Наші послуги</h2>
-    <h2 data-lang="en" style="display:none">Our services</h2>
+    <h2 data-lang="uk">Наші послуги</h2>
+    <h2 data-lang="en">Our services</h2>
     <ul>
-      <li>Czyszczenie i dezynfekcja</li>
-      <li>Farbowanie i pielęgnacja skóry</li>
-      <li>Renowacja i naprawa</li>
+      <li data-lang="pl">Czyszczenie</li>
+      <li data-lang="pl">Dezynfekcja</li>
+      <li data-lang="pl">Farbowanie skóry, zamszu, nubuku, podeszwy</li>
+      <li data-lang="pl">Pielęgnacja materiałów i renowacja</li>
+      <li data-lang="pl">Wybielanie detali</li>
+      <li data-lang="pl">Naprawa</li>
+      <li data-lang="pl">Rozciąganie na długość i szerokość</li>
+
+      <li data-lang="uk">Чищення</li>
+      <li data-lang="uk">Дезінфекція</li>
+      <li data-lang="uk">Фарбування шкіри, замші, нубуку, підошви</li>
+      <li data-lang="uk">Догляд за матеріалами та відновлення</li>
+      <li data-lang="uk">Вибілювання деталей</li>
+      <li data-lang="uk">Ремонт</li>
+      <li data-lang="uk">Розтягування в довжину та ширину</li>
+
+      <li data-lang="en">Cleaning</li>
+      <li data-lang="en">Disinfection</li>
+      <li data-lang="en">Dyeing leather, suede, nubuck, soles</li>
+      <li data-lang="en">Material care and restoration</li>
+      <li data-lang="en">Detail whitening</li>
+      <li data-lang="en">Repair</li>
+      <li data-lang="en">Stretching (length & width)</li>
     </ul>
   </section>
 
   <section id="courier">
     <h2 data-lang="pl">Usługa kuriera</h2>
-    <h2 data-lang="uk" style="display:none">Кур'єрська послуга</h2>
-    <h2 data-lang="en" style="display:none">Courier service</h2>
-    <p data-lang="pl">Oferujemy odbiór i dostawę obuwia na terenie Gdańska. Cena ustalana indywidualnie.</p>
-    <p data-lang="uk" style="display:none">Забираємо та доставляємо взуття по Ґданську. Ціна обговорюється індивідуально.</p>
-    <p data-lang="en" style="display:none">We pick up and deliver shoes in Gdańsk. Price discussed individually.</p>
+    <h2 data-lang="uk">Кур'єрська послуга</h2>
+    <h2 data-lang="en">Courier service</h2>
+    <p data-lang="pl">Oferujemy odbiór i dostawę obuwia na terenie Gdańska.Cena ustalana indywidualnie.</p>
+    <p data-lang="uk">Забираємо та доставляємо взуття по Ґданську. Ціна обговорюється індивідуально.</p>
+    <p data-lang="en">We pick up and deliver shoes in Gdańsk. Price discussed individually.</p>
   </section>
 
   <section id="contact">
     <h2 data-lang="pl">Kontakt</h2>
-    <h2 data-lang="uk" style="display:none">Контакти</h2>
-    <h2 data-lang="en" style="display:none">Contact</h2>
+    <h2 data-lang="uk">Контакти</h2>
+    <h2 data-lang="en">Contact</h2>
     <div class="contacts">
-      <a href="https://wa.me/48728200670">WhatsApp</a>
-      <a href="https://t.me/+48728200670">Telegram</a>
-      <a href="https://www.facebook.com/share/16HeBvywdp/?mibextid=wwXIfr">Messenger</a>
+      <a href="tel:+48728200670">+48 728 200 670</a>
+      <a href="https://wa.me/48728200670"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/whatsapp.svg" alt="WhatsApp" class="icon-button"></a>
+      <a href="https://t.me/+48728200670"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/telegram.svg" alt="Telegram" class="icon-button"></a>
+      <a href="https://www.facebook.com/share/16HeBvywdp/?mibextid=wwXIfr"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/facebook.svg" alt="Messenger" class="icon-button"></a>
+      <a href="https://www.instagram.com/shoerehab.pl?igsh=aHlnNnhkdXBmYmF3"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/instagram.svg" alt="Instagram" class="icon-button"></a>
       <a href="mailto:shoerehabgd@gmail.com">shoerehabgd@gmail.com</a>
     </div>
+    <div class="form-buttons">
+      <a href="#">Заповнити форму для консультації</a>
+      <a href="#">Заповнити заявку на послугу</a>
+      <a href="#">Замовити кур'єра</a>
+    </div>
+    <br/>
+    <p><strong>Локація наших партнерів:</strong></p>
     <p>Długie Ogrody 11, 80-765 Gdańsk</p>
     <p>Godziny otwarcia: Poniedziałek–Czwartek, 11:00–17:00</p>
   </section>
