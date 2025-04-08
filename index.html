@@ -23,7 +23,7 @@
       text-align: center;
     }
     nav a {
-      margin: 0 1rem;
+      margin: 0 0.8rem;
       color: #5CE1E6;
       text-decoration: none;
       font-weight: bold;
@@ -34,7 +34,6 @@
       background: #2B2B2B;
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h1, h2 {
       color: #5CE1E6;
@@ -98,47 +97,70 @@
     <button onclick="switchLang('uk')">UK</button>
     <button onclick="switchLang('en')">EN</button>
   </div>
+
   <header>
     <h1>Shoe Rehab</h1>
     <p data-lang="pl">Profesjonalna pielęgnacja i renowacja obuwia w Gdańsku</p>
     <p data-lang="uk">Професійне очищення та реставрація взуття в Гданську</p>
-    <p data-lang="en">Professional shoe cleaning and restoration in Gdansk</p>
+    <p data-lang="en">Professional shoe cleaning and restoration in Gdańsk</p>
   </header>
 
   <nav>
-    <a href="#services">Usługi</a>
-    <a href="#courier">Kurier</a>
-    <a href="#contact">Kontakt</a>
+    <a href="#services" data-lang="pl">Usługi</a>
+    <a href="#services" data-lang="uk">Послуги</a>
+    <a href="#services" data-lang="en">Services</a>
+
+    <a href="#courier" data-lang="pl">Kurier</a>
+    <a href="#courier" data-lang="uk">Курʼєр</a>
+    <a href="#courier" data-lang="en">Courier</a>
+
+    <a href="#reviews" data-lang="pl">Opinie</a>
+    <a href="#reviews" data-lang="uk">Відгуки</a>
+    <a href="#reviews" data-lang="en">Reviews</a>
+
+    <a href="#beforeafter" data-lang="pl">Przed / Po</a>
+    <a href="#beforeafter" data-lang="uk">До / Після</a>
+    <a href="#beforeafter" data-lang="en">Before / After</a>
+
+    <a href="#pricing" data-lang="pl">Cennik</a>
+    <a href="#pricing" data-lang="uk">Вартість</a>
+    <a href="#pricing" data-lang="en">Pricing</a>
+
+    <a href="#contact" data-lang="pl">Kontakt</a>
+    <a href="#contact" data-lang="uk">Контакти</a>
+    <a href="#contact" data-lang="en">Contact</a>
   </nav>
 
   <section id="services">
     <h2 data-lang="pl">Nasze usługi</h2>
     <h2 data-lang="uk">Наші послуги</h2>
     <h2 data-lang="en">Our services</h2>
-    <ul>
-      <li data-lang="pl">Czyszczenie</li>
-      <li data-lang="pl">Dezynfekcja</li>
-      <li data-lang="pl">Farbowanie skóry, zamszu, nubuku, podeszwy</li>
-      <li data-lang="pl">Pielęgnacja materiałów i renowacja</li>
-      <li data-lang="pl">Wybielanie detali</li>
-      <li data-lang="pl">Naprawa</li>
-      <li data-lang="pl">Rozciąganie na długość i szerokość</li>
-
-      <li data-lang="uk">Чищення</li>
-      <li data-lang="uk">Дезінфекція</li>
-      <li data-lang="uk">Фарбування шкіри, замші, нубуку, підошви</li>
-      <li data-lang="uk">Догляд за матеріалами та відновлення</li>
-      <li data-lang="uk">Вибілювання деталей</li>
-      <li data-lang="uk">Ремонт</li>
-      <li data-lang="uk">Розтягування в довжину та ширину</li>
-
-      <li data-lang="en">Cleaning</li>
-      <li data-lang="en">Disinfection</li>
-      <li data-lang="en">Dyeing leather, suede, nubuck, soles</li>
-      <li data-lang="en">Material care and restoration</li>
-      <li data-lang="en">Detail whitening</li>
-      <li data-lang="en">Repair</li>
-      <li data-lang="en">Stretching (length & width)</li>
+    <ul data-lang="pl">
+      <li>Czyszczenie</li>
+      <li>Dezynfekcja</li>
+      <li>Farbowanie skóry, zamszu, nubuku, podeszwy</li>
+      <li>Pielęgnacja materiałów i renowacja</li>
+      <li>Wybielanie detali</li>
+      <li>Naprawa</li>
+      <li>Rozciąganie na długość i szerokość</li>
+    </ul>
+    <ul data-lang="uk">
+      <li>Чищення</li>
+      <li>Дезінфекція</li>
+      <li>Фарбування шкіри, замші, нубуку, підошви</li>
+      <li>Догляд за матеріалами та відновлення</li>
+      <li>Вибілювання деталей</li>
+      <li>Ремонт</li>
+      <li>Розтягування в довжину та ширину</li>
+    </ul>
+    <ul data-lang="en">
+      <li>Cleaning</li>
+      <li>Disinfection</li>
+      <li>Dyeing leather, suede, nubuck, soles</li>
+      <li>Material care and restoration</li>
+      <li>Detail whitening</li>
+      <li>Repair</li>
+      <li>Stretching (length & width)</li>
     </ul>
   </section>
 
@@ -146,7 +168,7 @@
     <h2 data-lang="pl">Usługa kuriera</h2>
     <h2 data-lang="uk">Кур'єрська послуга</h2>
     <h2 data-lang="en">Courier service</h2>
-    <p data-lang="pl">Oferujemy odbiór i dostawę obuwia na terenie Gdańska.Cena ustalana indywidualnie.</p>
+    <p data-lang="pl">Oferujemy odbiór i dostawę obuwia na terenie Gdańska. Cena ustalana indywidualnie.</p>
     <p data-lang="uk">Забираємо та доставляємо взуття по Ґданську. Ціна обговорюється індивідуально.</p>
     <p data-lang="en">We pick up and deliver shoes in Gdańsk. Price discussed individually.</p>
   </section>
@@ -164,12 +186,22 @@
       <a href="mailto:shoerehabgd@gmail.com">shoerehabgd@gmail.com</a>
     </div>
     <div class="form-buttons">
-      <a href="#">Заповнити форму для консультації</a>
-      <a href="#">Заповнити заявку на послугу</a>
-      <a href="#">Замовити кур'єра</a>
+      <a href="#" data-lang="pl">Wypełnij formularz konsultacyjny</a>
+      <a href="#" data-lang="uk">Заповнити форму для консультації</a>
+      <a href="#" data-lang="en">Fill in consultation form</a>
+
+      <a href="#" data-lang="pl">Złóż zamówienie na usługę</a>
+      <a href="#" data-lang="uk">Заповнити заявку на послугу</a>
+      <a href="#" data-lang="en">Order a service</a>
+
+      <a href="#" data-lang="pl">Zamów kuriera</a>
+      <a href="#" data-lang="uk">Замовити кур'єра</a>
+      <a href="#" data-lang="en">Request a courier</a>
     </div>
     <br/>
-    <p><strong>Локація наших партнерів:</strong></p>
+    <p data-lang="pl"><strong>Lokalizacja partnerów:</strong></p>
+    <p data-lang="uk"><strong>Локація наших партнерів:</strong></p>
+    <p data-lang="en"><strong>Our partners’ location:</strong></p>
     <p>Długie Ogrody 11, 80-765 Gdańsk</p>
     <p>Godziny otwarcia: Poniedziałek–Czwartek, 11:00–17:00</p>
   </section>
