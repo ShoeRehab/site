@@ -8,22 +8,21 @@
     body {
       font-family: 'General Sans', sans-serif;
       margin: 0;
-      padding: 2rem;
       background: #2B2B2B;
       color: white;
     }
     header {
       text-align: center;
+      padding: 2rem 1rem;
       background: #2B2B2B;
-      color: white;
-      padding: 1.5rem 1rem;
     }
     nav {
-      margin: 1rem 0;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 1rem;
+      padding: 1rem;
+      background-color: #1f1f1f;
     }
     nav a {
       color: #5CE1E6;
@@ -31,39 +30,20 @@
       font-weight: bold;
     }
     section {
-      max-width: 800px;
+      padding: 2rem 1rem;
+      max-width: 1000px;
       margin: auto;
-      background: #2B2B2B;
-      padding: 2rem;
-      border-radius: 10px;
     }
-    h1, h2 {
+    h2 {
       color: #5CE1E6;
       text-align: center;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-    .contacts-icons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
       margin-bottom: 1rem;
-    }
-    .contacts-icons a img {
-      width: 32px;
-      height: 32px;
-    }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      padding: 1rem;
-      color: #777;
     }
     .lang-switcher {
       position: fixed;
       top: 10px;
       right: 10px;
+      z-index: 1000;
     }
     .lang-switcher button {
       margin-left: 5px;
@@ -81,8 +61,29 @@
       border-radius: 6px;
       max-width: 300px;
     }
-    .contact-info {
+    .icon-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .icon-row a img {
+      width: 32px;
+      height: 32px;
+    }
+    .contact-info, .partner-info {
       text-align: center;
+      color: white;
+    }
+    .images-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .images-grid img {
+      max-width: 100%;
+      border-radius: 10px;
     }
   </style>
   <script>
@@ -133,7 +134,7 @@
     <a href="#partners-location" data-lang="pl">Lokalizacja partnerów</a>
     <a href="#partners-location" data-lang="uk">Локація партнерів</a>
     <a href="#partners-location" data-lang="en">Partners' Location</a>
-  
+
     <a href="#contact" data-lang="pl">Kontakt</a>
     <a href="#contact" data-lang="uk">Контакти</a>
     <a href="#contact" data-lang="en">Contact</a>
