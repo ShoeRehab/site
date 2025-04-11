@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoe Rehab</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="logo.png" alt="Shoe Rehab Logo" class="logo" />
+      <ul>
+        <li><a href="#about">Dlaczego Shoe Rehab</a></li>
+        <li><a href="#services">Usługi</a></li>
+        <li><a href="#before-after">Przed / Po</a></li>
+        <li><a href="#courier">Kurier</a></li>
+        <li><a href="#reviews">Opinie</a></li>
+        <li><a href="#pricing">Cennik</a></li>
+        <li><a href="#partners">Lokalizacja</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#info">Informacje</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Dlaczego stworzyliśmy Shoe Rehab?</h2>
+    <p>Juz od najmłodszych lat kochałem swoje buty, starałem się o nie dbać... (редагований текст з твоєї історії)...</p>
+    <img src="yaroslav.jpg" alt="Właściciel - Jarosław" class="owner-img" />
+  </section>
+
+  <section id="services">
+    <h2>Nasze usługi</h2>
+    <!-- Список послуг -->
+  </section>
+
+  <section id="before-after">
+    <h2>Efekty naszej pracy</h2>
+    <div class="before-after">
+      <div class="image-container">
+        <p class="label">Przed</p>
+        <img src="before.jpg" alt="Before" />
+      </div>
+      <div class="image-container">
+        <p class="label">Po</p>
+        <img src="after.jpg" alt="After" />
+      </div>
+    </div>
+  </section>
+
+  <section id="courier">
+    <h2>Zamów kuriera</h2>
+    <button onclick="openForm('courier')">Zamów kuriera</button>
+  </section>
+
+  <section id="reviews">
+    <h2>Opinie klientów</h2>
+    <!-- Відгуки -->
+  </section>
+
+  <section id="pricing">
+    <h2>Cennik i zniżki</h2>
+    <p>Oznacz nas @shoerehab.pl na relacji i otrzymaj 5% rabatu</p>
+    <p>Skorzystaj z usług dla minimum 3 par butów i otrzymaj 15% rabatu</p>
+    <p>Każdą piątą parę czyścimy za darmo</p>
+  </section>
+
+  <section id="partners">
+    <h2>Lokalizacja naszych partnerów</h2>
+    <!-- Мапа чи список -->
+  </section>
+
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <button onclick="openForm('consult')">Bezpłatna konsultacja</button>
+    <button onclick="openForm('order')">Zamów usługę</button>
+  </section>
+
+  <section id="info">
+    <h2>Ciekawa informacja dla Ciebie</h2>
+    <p>(Тут буде місце для SEO-статей)</p>
+  </section>
+
+  <div id="form-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeForm()">&times;</span>
+      <form id="dynamic-form">
+        <!-- Динамічна генерація полів JS -->
+        <button type="submit">Wyślij</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Shoe Rehab</p>
+  </footer>
+
+  <script>
+    const FORMS = {
+      consult: [
+        { label: 'Imię', name: 'name', required: true },
+        { label: 'Kontakt', name: 'contact', required: true },
+        { label: 'Komentarz (opcjonalnie)', name: 'comment', required: false },
+      ],
+      order: [
+        { label: 'Imię', name: 'name', required: true },
+        { label: 'Kontakt', name: 'contact', required: true },
+        { label: 'Jaka usługa / problem?', name: 'problem', required: true },
+        { label: 'Komentarz (opcjonalnie)', name: 'comment', required: false },
+      ],
+      courier: [
+        { label: 'Imię', name: 'name', required: true },
+        { label: 'Kontakt', name: 'contact', required: true },
+        { label: 'Adres', name: 'address', required: true },
+        { label: 'Jaka usługa / problem?', name: 'problem', required: true },
+        { label: 'Komentarz (opcjonalnie)', name: 'comment', required: false },
+      ],
+    };
+
+    function openForm(type) {
+      const modal = document.getElementById('form-modal');
+      const form = document.getElementById('dynamic-form');
+      form.innerHTML = '';
+      FORMS[type].forEach(field => {
+        const label = document.createElement('label');
+        label.textContent = field.label;
+        const input = document.createElement(field.required ? 'input' : 'textarea');
+        input.name = field.name;
+        input.required = field.required;
+        form.appendChild(label);
+        form.appendChild(input);
+      });
+      const submit = document.createElement('button');
+      submit.type = 'submit';
+      submit.textContent = 'Wyślij';
+      form.appendChild(submit);
+      modal.style.display = 'block';
+    }
+
+    function closeForm() {
+      document.getElementById('form-modal').style.display = 'none';
+    }
+
+    document.getElementById('dynamic-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const message = [...formData.entries()].map(([k, v]) => `${k}: ${v}`).join('\n');
+      await fetch(`https://api.telegram.org/bot7322146975:AAFgIQSc0wJcLBqKWrZvpFfKuEVUb5s9I0Y/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: '@shoe_rehab_admin', // заміни на твій chat ID або канал
+          text: message
+        })
+      });
+      alert('Formularz został wysłany!');
+      closeForm();
+    });
+  </script>
+</body>
+
+</html>
